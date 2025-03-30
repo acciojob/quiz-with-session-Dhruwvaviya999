@@ -97,7 +97,7 @@ submitBtn.addEventListener("click", () => {
 	})
 
 	document.getElementById("score").textContent = score;
-	sessionStorage.setItem("score", score);
+	localStorage.setItem("score", score);
 });
 
 
