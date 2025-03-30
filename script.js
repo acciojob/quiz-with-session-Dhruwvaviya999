@@ -90,13 +90,16 @@ submitBtn.addEventListener("click", () => {
     userAnswers.push(input.value);
   });
 
-	questions.forEach((question)=>{
+	setTimeout(()=>{
+		questions.forEach((question)=>{
 		if(progress[question.question] === question.answer){
 			score++;
 		}
 	})
 
 	document.getElementById("score").textContent = score;
+	
+	}, 1000);
 	localStorage.setItem("score", score);
 });
 
