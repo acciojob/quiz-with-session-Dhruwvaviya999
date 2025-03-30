@@ -53,7 +53,7 @@ function renderQuestions() {
       choiceElement.setAttribute("value", choice);
 
 		
-      if (progress[question.question] === choice) {
+      if (userAnswers[i] === choice) {
         choiceElement.checked = true;
       }
 
