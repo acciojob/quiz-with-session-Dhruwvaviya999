@@ -90,12 +90,10 @@ submitBtn.addEventListener("click", () => {
     userAnswers.push(input.value);
   });
 
-	setTimeout(()=>{
-		questions.forEach((question)=>{
-		if(progress[question.question] === question.answer){
-			score++;
-		}
-	})
+	questions.forEach((question)=>{
+	if(progress[question.question] === question.answer){
+		score++;
+	}
 
 	document.getElementById("score").textContent = score;
 	
