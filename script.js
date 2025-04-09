@@ -48,7 +48,7 @@ function renderQuestions() {
 
       const choiceElement = document.createElement("input");
       choiceElement.type = "radio";
-      choiceElement.name = question-${i};
+      choiceElement.name = `question-${i}`;
       choiceElement.value = choice;
 
       if (userAnswers[i] === choice) {
@@ -69,6 +69,7 @@ function renderQuestions() {
     questionsElement.appendChild(questionElement);
   }
 }
+
 renderQuestions();
 
 submitButton.addEventListener("click", () => {
@@ -80,6 +81,6 @@ submitButton.addEventListener("click", () => {
     }
   });
 
-  scoreElement.textContent = `Your score is ${score} out of ${questions.length}`.;
+  scoreElement.textContent = `Your score is ${score} out of ${questions.length}`;
   localStorage.setItem("score", score.toString());
 });
