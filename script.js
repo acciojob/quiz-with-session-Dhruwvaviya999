@@ -80,6 +80,6 @@ submitButton.addEventListener("click", () => {
     }
   });
 
-  scoreElement.textContent = Your score is ${score} out of ${questions.length}.;
+  scoreElement.textContent = `Your score is ${score} out of ${questions.length}`.;
   localStorage.setItem("score", score.toString());
 });
